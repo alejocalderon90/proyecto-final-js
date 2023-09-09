@@ -1,0 +1,1 @@
+Este es un simulador que muestra el estado de la cursada para los alumnos Laura Nuñez, Maxi Lopez y Ramiro Gomez. Mientras el usuario ingrese los nombres de alumnos regulares el simulador mostrará el estado de la cursada, de lo contrario mostrará un error y pedirá que ingrese el nombre correcto del alumno o finalice el proceso con el comando "finalizar".
