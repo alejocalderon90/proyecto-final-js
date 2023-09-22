@@ -88,6 +88,15 @@ body {
             width: 40px;
             color: white; }
 
+.offcanvas-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; }
+
 .slider {
   width: 90%;
   height: 100vh;
