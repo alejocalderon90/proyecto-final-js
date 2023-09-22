@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  font-size: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center; }
+
+h2 {
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center; }
+
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  text-align: center; }
+
+body {
+  background: url(../img/avengers4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.header {
+  width: 8%;
+  height: 80px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.79);
+  position: fixed;
+  top: 0;
+  right: 0; }
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px; }
+    .header__nav__ul {
+      margin: 0 20px 0 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
+      .header__nav__ul__li {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: black; }
+        .header__nav__ul__li:hover {
+          background: green;
+          filter: grayscale(50%);
+          transition: all .3s ease; }
+        .header__nav__ul__li__cart {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center; }
+          .header__nav__ul__li__cart svg {
+            height: 40px;
+            width: 40px;
+            color: white; }
+
+.slider {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgba(128, 128, 128, 0.8);
+  border-radius: 20px;
+  margin: 100px auto;
+  padding: 20px; }
+  .slider__title {
+    padding: 10px; }
+  .slider__img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    background: rgba(45, 153, 45, 0.834);
+    border-radius: 20px;
+    padding: 20px; }
+    .slider__img__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 24%;
+      height: 400px;
+      background: rgba(0, 79, 0, 0.84);
+      border-radius: 20px;
+      padding: 10px; }
+      .slider__img__container img {
+        height: 150px;
+        width: 100%;
+        border: 2px black solid;
+        border-radius: 20px; }
+      .slider__img__container p {
+        width: 100%;
+        font-weight: bold;
+        color: white; }
+
+.slider__link {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 50%;
+  background: black;
+  color: white; }
+  .slider__link:hover {
+    background: green;
+    color: black;
+    border: 2px grey solid;
+    transition: all .3s ease; }

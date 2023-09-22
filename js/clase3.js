@@ -1,3 +1,6 @@
+
+
+/*
 let alumno = prompt("ingrese el nombre del alumno/a regular").toUpperCase()
 
 let alumno1 = "LAURA NUÑEZ"
@@ -27,5 +30,5 @@ function mostrarNota() {
     }
 }
 
-mostrarNota(alumno)
+mostrarNota(alumno)*/
 
