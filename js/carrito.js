@@ -25,34 +25,33 @@ avengers.addEventListener("click", () => {
 */
 const peliculas = [
     {
-        id:1,
+        id: 1,
         imagen: "./img/avengers1.jpg",
         nombre: "AVENGERS",
         precio: "AR$ 800"
     },
     {
-        id:2,
+        id: 2,
         imagen: "./img/avengers2.jpg",
         nombre: "AVENGERS - AGE OF ULTRON",
         precio: "AR$ 1200"
     },
     {
-        id:3,
+        id: 3,
         imagen: "./img/avengers3.jpg",
         nombre: "AVENGERS - INFINITY WAR",
         precio: "AR$ 2000"
     },
     {
-        id:4,
+        id: 4,
         imagen: "./img/avengers4.jpg",
         nombre: "AVENGERS - END GAME",
         precio: "AR$ 3000"
     },
 ]
 
-const divPeliculas = document.querySelector("#contenedorDePelis")
 
-peliculas.forEach((pelicula) =>{
+peliculas.forEach((pelicula) => {
     let contenedorPelicula = document.createElement("div")
     contenedorPelicula.classList.add("slider__img__container")
     contenedorPelicula.innerHTML = `
@@ -68,7 +67,7 @@ const agregarPelicula = document.querySelectorAll("#agregarPelicula")
 let carrito = document.querySelector("#cart")
 
 
-agregarPelicula.forEach((agregar) =>{
+agregarPelicula.forEach((agregar) => {
     agregar.addEventListener("click", peliAgregada)
 })
 function peliAgregada(event) {
@@ -79,6 +78,15 @@ function peliAgregada(event) {
     const pelisPrecio = pelis.querySelector("#precio").textContent
 
     agregarPelisItems(pelisImagen, pelisTitulo, pelisPrecio)
+
+    const alertAgregado = document.createElement("div")
+    alertAgregado.innerHTML = `<div class="alert alert-success d-flex align-items-center" role="alert">
+    <div>
+    ¡La pelicula fue agregada con exito!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    </div>`
+    divPeliculas.append(alertAgregado)
 }
 
 function agregarPelisItems(pelisImagen, pelisTitulo, pelisPrecio) {
@@ -91,6 +99,8 @@ function agregarPelisItems(pelisImagen, pelisTitulo, pelisPrecio) {
     <button id="eliminarPelicula" class="btn btn-danger buttonDelete" type="button">X</button>
     `
     carrito.append(carritoDiv)
+
+
     carritoDiv.querySelector("#eliminarPelicula").addEventListener("click", eliminarPelicula)
 
     totalCarrito()
@@ -100,12 +110,14 @@ function agregarPelisItems(pelisImagen, pelisTitulo, pelisPrecio) {
     botonComprar.addEventListener("click", eliminarCarrito)
 }
 
+
+
 function totalCarrito() {
     let total = 0
     const totalCarrito = document.querySelector("#total")
     const itemsAgregados = document.querySelectorAll(".items__carrito")
 
-    itemsAgregados.forEach((itemAgregado) =>{
+    itemsAgregados.forEach((itemAgregado) => {
         const itemPrecio = itemAgregado.querySelector("#precio")
         const precioPelicula = Number(itemPrecio.textContent.replace("AR$", ""))
         total = total + precioPelicula
@@ -117,20 +129,29 @@ function totalCarrito() {
 }
 
 
-
 function eliminarPelicula(event) {
     const buttonDelete = event.target
     buttonDelete.closest(".items__carrito").remove()
+    const alertEliminado = document.createElement("div")
+    alertEliminado.innerHTML = `<div class="alert alert-success d-flex align-items-center" role="alert">
+    <div>
+    ¡La pelicula fue eleiminada con exito!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    </div>`
+    carrito.append(alertEliminado)
     totalCarrito()
 }
 
 
 function eliminarCarrito() {
-    carrito.classList.add("parrafo__compra")
-    carrito.innerHTML = `
-    <p>¡Gracias por tu compra!</p>
-    <p>Tu solicitud ha sido enviada.</p>
-    `
+    carrito.innerHTML = `<div class="alert alert-success d-flex align-items-center" role="alert">
+    <div>
+    ¡La compra fue ejecutada con exito!
+    Tu solicitud fue enviada.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    </div>`
     totalCarrito()
 }
 
