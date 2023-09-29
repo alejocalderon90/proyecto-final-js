@@ -49,7 +49,7 @@ const peliculas = [
         precio: "AR$ 3000"
     },
 ]
-
+const divPeliculas = document.querySelector("#contenedorDePelis")
 
 peliculas.forEach((pelicula) => {
     let contenedorPelicula = document.createElement("div")
@@ -63,9 +63,14 @@ peliculas.forEach((pelicula) => {
     divPeliculas.appendChild(contenedorPelicula)
 })
 
+
+
 const agregarPelicula = document.querySelectorAll("#agregarPelicula")
 let carrito = document.querySelector("#cart")
 
+let carritoArray = []
+
+peliculasLocalStorage()
 
 agregarPelicula.forEach((agregar) => {
     agregar.addEventListener("click", peliAgregada)
@@ -77,7 +82,12 @@ function peliAgregada(event) {
     const pelisTitulo = pelis.querySelector("#titulo").textContent
     const pelisPrecio = pelis.querySelector("#precio").textContent
 
+    const pelisAlArray = { imagen: pelisImagen, titulo: pelisTitulo, precio: pelisPrecio }
+    carritoArray.push(pelisAlArray)
+    localStorage.setItem("carritoStorage", JSON.stringify(carritoArray))
+
     agregarPelisItems(pelisImagen, pelisTitulo, pelisPrecio)
+
 
     const alertAgregado = document.createElement("div")
     alertAgregado.innerHTML = `<div class="alert alert-success d-flex align-items-center" role="alert">
@@ -87,7 +97,10 @@ function peliAgregada(event) {
     </div>
     </div>`
     divPeliculas.append(alertAgregado)
+
 }
+
+
 
 function agregarPelisItems(pelisImagen, pelisTitulo, pelisPrecio) {
     const carritoDiv = document.createElement("div")
@@ -99,7 +112,6 @@ function agregarPelisItems(pelisImagen, pelisTitulo, pelisPrecio) {
     <button id="eliminarPelicula" class="btn btn-danger buttonDelete" type="button">X</button>
     `
     carrito.append(carritoDiv)
-
 
     carritoDiv.querySelector("#eliminarPelicula").addEventListener("click", eliminarPelicula)
 
@@ -153,5 +165,12 @@ function eliminarCarrito() {
     </div>
     </div>`
     totalCarrito()
+}
+
+function peliculasLocalStorage() {
+    if (JSON.parse(localStorage.getItem("carritoStorage"))) {
+        carritoArray = JSON.parse(localStorage.getItem("carritoStorage"))
+        agregarPelisItems(carritoArray)
+    }
 }
 
