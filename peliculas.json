@@ -1,0 +1,93 @@
+[
+    {
+        "id": "1",
+        "imagen": "./img/avengers1.jpg",
+        "nombre": "AVENGERS",
+        "precio": "800"
+        },
+    {
+        "id": "2",
+        "imagen": "./img/avengers2.jpg",
+        "nombre": "AVENGERS - AGE OF ULTRON",
+        "precio": "1200"
+    },
+    {
+        "id": "3",
+        "imagen": "./img/avengers3.jpg",
+        "nombre": "AVENGERS - INFINITY WAR",
+        "precio": "2000"
+    },
+    {
+        "id": "4",
+        "imagen": "./img/avengers4.jpg",
+        "nombre": "AVENGERS - END GAME",
+        "precio": "3000"
+    },
+    {
+        "id": "5",
+        "imagen": "./img/lotr-lacomunidad.jpg",
+        "nombre": "EL SEÑOR DE LOS ANILLOS - LA COMUNIDAD DEL ANILLO",
+        "precio": "1300"
+    },
+    {
+        "id": "6",
+        "imagen": "./img/loftr-twotowers.jpg",
+        "nombre": "EL SEÑOR DE LOS ANILLOS - LAS DOS TORRES",
+        "precio": "1800"
+    },
+    {
+        "id": "7",
+        "imagen": "./img/lotr-return.jpg",
+        "nombre": "EL SEÑOR DE LOS ANILLOS - EL RETORNO DEL REY",
+        "precio": "2500"
+    },
+    {
+        "id": "8",
+        "imagen": "./img/hrptt-1.jpg",
+        "nombre": "HARRY POTTER Y LA PIEDRA FILOSOFAL",
+        "precio": "800"
+    },
+    {
+        "id": "9",
+        "imagen": "./img/hrptt-2.jpg",
+        "nombre": "HARRY POTTER Y LA CAMARA DE LOS SECRETOS",
+        "precio": "1200"
+    },
+    {
+        "id": "10",
+        "imagen": "./img/hrptt-3.jpg",
+        "nombre": "HARRY POTTER Y EL PRISIONERO DE AZKABAN",
+        "precio": "1800"
+    },
+    {
+        "id": "11",
+        "imagen": "./img/hrptt-caliz.jpg",
+        "nombre": "HARRY POTTER Y EL CALIZ DE FUEGO",
+        "precio": "2700"
+    },
+    {
+        "id": "12",
+        "imagen": "./img/hrptt-fenix.jpg",
+        "nombre": "HARRY POTTER Y LA ORDEN DEL FENIX",
+        "precio": "3200"
+    },
+    {
+        "id": "13",
+        "imagen": "./img/hrptt-principe6.jpg",
+        "nombre": "HARRY POTTER Y EL MISTERIO DEL PRINCIPE",
+        "precio": "4100"
+    },
+    {
+        "id": "14",
+        "imagen": "./img/hrptt-7-1.jpg",
+        "nombre": "HARRY POTTER Y LAS RELIQUIAS DE LA MUERTE PARTE 1",
+        "precio": "5000"
+    },
+    {
+        "id": "15",
+        "imagen": "./img/hrptt-7-2.jpg",
+        "nombre": "HARRY POTTER Y LAS RELIQUIAS DE LA MUERTE PARTE 2",
+        "precio": "5000"
+    }
+
+]

@@ -9,22 +9,22 @@ body{
     background-attachment: fixed;
 }
 .header{
-    width: 8%;
+    width: 100%;
     height: 80px;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
     @include flex(flex, row, wrap, flex-end, center);
     background: rgba(255, 255, 255, 0.79);
     position: fixed;
     top: 0;
     right: 0;
     &__nav{
-        @include flex(flex, row, wrap, center, center);
-        width: 70px;
+        @include flex(flex, row, wrap, flex-end, center);
+        width: 100%;
         height: 70px;
         &__ul{
             margin: 0 20px 0 0;
-            @include flex(flex, row, wrap, center, center);
+            width: 80%;
+            @include flex(flex, row, wrap, space-between, center);
+            
             &__li{
                 @include flex(flex, row, wrap, center, center);
                 height: 50px;
@@ -48,6 +48,15 @@ body{
         }
     }
 }
+.buscador{
+    width: 200px;
+    margin-right: 10px;
+    height: 20px;
+}
+.bi{
+    font-size: 18px;
+}
+
 .offcanvas-body{
     @include flex(flex, row, wrap, center, center);
     text-align: center;
@@ -106,7 +115,7 @@ body{
 }
 .slider{
     width: 90%;
-    height: 100vh;
+    height: min-content;
     @include flex(flex, row, wrap, center, center);
     background: rgba(128, 128, 128, 0.8);
     border-radius: 20px;
@@ -118,7 +127,7 @@ body{
     &__img{
         @include flex(flex, row, wrap, space-between, center);
         width: 100%;
-        height: 500px;
+        height: 100%;
         background: rgba(45, 153, 45, 0.834);
         border-radius: 20px;
         padding: 20px;
@@ -129,6 +138,7 @@ body{
             background: rgba(0, 79, 0, 0.84);
             border-radius: 20px;
             padding: 10px;
+            margin-bottom: 20px;
             img{
                 height: 150px;
                 width: 100%;
