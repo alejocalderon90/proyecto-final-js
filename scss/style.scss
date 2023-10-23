@@ -172,3 +172,17 @@ body{
 .alert{
     transition: all 0.5s ease;
 }
+
+//media queries//
+
+@media screen and (max-width: 810px){
+    .slider__img__container{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .slider__img__container{
+        width: 100%;
+    }
+}
